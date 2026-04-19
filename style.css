@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Raleway:wght@300;400;500;700&display=swap');
+
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8CC80;
+  --gold-dim: #7A6535;
+  --bg: #080604;
+  --bg2: #100D08;
+  --bg3: #181310;
+  --text: #EDE5D0;
+  --muted: #6A6050;
+  --border: rgba(201, 168, 76, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  text-align: center;
+  padding: 44px 20px 36px;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg3);
+  overflow: hidden;
+}
+
+.logo-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.brand {
+  font-family: 'Cinzel', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--gold-light);
+}
+
+.brand-sub {
+  font-size: 0.68rem;
+  letter-spacing: 0.45em;
+  color: var(--gold-dim);
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.index-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 44px 20px 60px;
+}
+
+.section-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.45em;
+  color: var(--gold-dim);
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.cat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.cat-full {
+  grid-column: 1 / -1;
+}
+
+.cat-card {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1.5px solid var(--border);
+  background: var(--bg3);
+  transition: transform 0.22s, border-color 0.22s;
+}
+
+.cat-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(201, 168, 76, 0.5);
+}
+
+.cat-card-img {
+  width: 100%;
+  height: 200px;
+  aspect-ratio: 3/2;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cat-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+.cat-full .cat-card-img {
+  aspect-ratio: 16/5;
+}
+
+.cat-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+.bg-homme {
+  background: linear-gradient(135deg, #1c1c22, #2a2830);
+}
+
+.bg-femme {
+  background: linear-gradient(135deg, #2a1520, #3d1f2e);
+}
+
+.bg-pack-h {
+  background: linear-gradient(135deg, #141820, #1c2330);
+}
+
+.bg-pack-f {
+  background: linear-gradient(135deg, #251520, #3a1e2e);
+}
+
+.bg-complet {
+  background: linear-gradient(135deg, #1a1508, #2a2010);
+}
+
+.cat-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+
+.cat-overlay span {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.85);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.cat-card-foot {
+  padding: 13px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+}
+
+.cat-card-foot .lbl {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cat-card-foot .arr {
+  color: var(--gold);
+  font-size: 1.1rem;
+}
+
+.cat-price{
+  font-family: 'Cinzel', serif;
+  display: block;
+  color: #fff;
+  text-align: left;
+  margin-top: -5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  margin-left: 16px;
+  font-weight: 600;
+}
+
+.page-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 36px 20px 60px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold-dim);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: var(--gold);
+}
+
+.page-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.page-sub {
+  font-size: 0.63rem;
+  letter-spacing: 0.32em;
+  color: var(--gold-dim);
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 36px 20px 28px;
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.social-link {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.social-link:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.social-link svg {
+  width: 17px;
+  height: 17px;
+}
+
+.payments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pay-badge {
+  height: 26px;
+  padding: 0 10px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: var(--bg2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+
+.footer-copy {
+  margin-top: 24px;
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.footer-copy span {
+  color: var(--gold);
+}
