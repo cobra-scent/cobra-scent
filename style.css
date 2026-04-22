@@ -36,6 +36,14 @@ header {
   border-bottom: 1px solid var(--border);
 }
 
+.livraison {
+  font-family: 'Cinzel', serif;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 100;
+  color: var(--gold-dim);
+}
+
 .logo-circle {
   width: 90px;
   height: 90px;
